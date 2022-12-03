@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    /* ### Primary */
+    --soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    /* ### Neutral */
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: var(--Off-white);
+}
+
+nav{
+    display: grid;
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+    grid-template: 50px / .0fr 2fr;
+    gap: 10px;
+    align-items: center;
+}
+
+ul a li{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-left:10px;
+
+}
+
+ul{
+    text-align: right;
+} 
+
+ul a{
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+ul a:hover{
+    color:var( --Soft-red);
+
+}
+.icon_menu{
+    background: url(/assets/images/icon-menu.svg) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.main_section{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-rows: 204px 104px 204px 204px;
+    grid-template-columns: repeat(3, minmax(200px,400px));
+    grid-template-areas: "image-web-3-desktop image-web-3-desktop new"
+                         "image-web-3-desktop image-web-3-desktop new"
+                         "read_more read_more new"
+                         "top_1 top_2 top_3";
+    gap: 6px;
+
+}
+
+.image-web-3-desktop{
+    background: url(/assets/images/image-web-3-desktop.jpg) no-repeat;
+    background-size: cover;
+    width:100%;
+    height: auto;
+    grid-area: image-web-3-desktop;
+}
+.new{
+    display: flex;
+    justify-content: space-evenly;
+    /* max-width: 300px;
+    min-width: 150px; */
+    height: auto;
+    line-height: 1.5;
+    padding-left:  10px;
+    /* padding-right:  10px; */
+    border: 1px solid black;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue);
+    justify-self: stretch;
+    grid-area: new;
+}
+.new h1{
+    color: var( --soft-orange) ;
+}
+.new p{
+    color:  var(--Grayish-blue);
+    padding: 5px 0;
+}
+
+.new_article{
+    padding: 5px ;
+}
+.new_article a,.new_article_border a{
+    text-decoration: none;
+    color: var( --Off-white) ;
+}
+.new_article a:hover,.new_article_border a:hover{
+    color: var(--soft-orange);
+
+}
+.new_article_border{
+    padding: 10px 0;
+}
+.new_article_border{
+    border-top: 1px solid var(--Grayish-blue) ;
+    border-bottom: 1px solid var(--Grayish-blue) ;
+}
+
+.read_more{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+    padding-top: 5px;
+    grid-area: read_more;
+}
+.read_more h1{
+    color: var(--Very-dark-blue);
+    font-size: 2.5rem;
+    font-weight:800;
+}
+
+.para_inside_read_more p{
+    color: var(--Grayish-blue);
+    padding-bottom: 38px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+.para_inside_read_more a{
+    text-decoration: none;
+    color: var(--Off-white);
+    background-color: var(--Soft-red);
+    width: 40px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    letter-spacing: 0.05rem;
+}
+.para_inside_read_more a:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+.top_1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width:100%;
+    height: auto;
+    grid-area: top_1;
+}
+.top_2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+    grid-area: top_2;
+}
+.top_3{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 92%;
+    height: 100%;
+    grid-area: top_3;
+}
+
+.image_top1{
+    width: 110px;
+    height: 76%;
+    background: url(/assets/images/image-retro-pcs.jpg) no-repeat;
+    background-size: cover;
+}
+
+.image_top2{
+    width: 110px;
+    height: 76%;
+    background: url(/assets/images/image-top-laptops.jpg) no-repeat;
+    background-size: cover;
+}
+.image_top3{
+    width: 110px;
+    height: 76%;
+    background: url(/assets/images/image-gaming-growth.jpg) no-repeat;
+    background-size: cover;
+}
+.description{
+    width: 200px;
+    height: 76%;
+    padding-left: 10px;
+}
+.description h1{
+    color: var(--Dark-grayish-blue);
+    font-weight:bolder;
+    padding-bottom: 5px 0;
+
+}
+.description h3{
+    padding:10px 0 ;
+}
+.description a{
+    text-decoration: none;
+    color: black;
+}
+.description a:hover{
+    color: var(--Soft-red);
+}
+.description p{
+    color: var(--Dark-grayish-blue);
+    line-height: 1.5;
+    font-weight: 600;
+    padding-top: 10px 0;
+}
+
+@media only screen and (max-width:840px) {
+    ul{
+        display: none;
+    }
+    div.icon_menu{
+        display: block;
+        justify-self: end;
+    }
+}
+
+@media only screen and (max-width: 788px){
+    .main_section{
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-rows: 200px 400px 400px 200px 200px 200px;
+        grid-template-columns: repeat(1, minmax(200px,100%));
+        grid-template-areas: "image-web-3-desktop"
+                             "new"
+                             "read_more"
+                             "top_1"
+                             "top_2"
+                             "top_3";
+        gap: 6px;
+    
+    }
+    .read_more{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 398px){
+    .main_section{
+        grid-template-rows: 200px 400px 400px 200px 200px 200px;
+    }
+}
+
